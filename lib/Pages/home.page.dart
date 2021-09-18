@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:semana3noticias/Models/articulo.model.dart';
-import 'package:semana3noticias/Providers/articulo.provider.dart';
+import 'package:semana3-flutter-1/Models/articulo.model.dart';
+import 'package:semana3-flutter-1/Providers/articulo.provider.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  HomePage({Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   final ArticuloProvider articuloProvider = ArticuloProvider();
-  Future<List<Articulo>>? listaArticulos;
+  Future<List<Articulo>> listaArticulos;
   int temporal = 1;
 
   @override
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
               listaArticulos = articuloProvider.getArticulos(page: temporal);
             });
           },
-          child: Icon(Icons.new_label),
+          child: Icon(Icons.label),
         )
     );
   }

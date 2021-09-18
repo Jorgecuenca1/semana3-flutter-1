@@ -10,14 +10,14 @@ class Articulo{
   String content;
 
   Articulo({
-    required this.source,
-    required this.author,
-    required this.title,
-    required this.description,
-    required this.url,
-    required this.urlToImage,
-    required this.publishedAt,
-    required this.content,
+    this.source,
+    this.author,
+    this.title,
+    this.description,
+    this.url,
+    this.urlToImage,
+    this.publishedAt,
+    this.content,
   });
 
 
@@ -39,8 +39,8 @@ class Source {
   String name;
 
   Source({
-    required this.id,
-    required this.name
+    this.id,
+    this.name
   });
 
   factory Source.fromJson(Map<String, dynamic> json) => Source(
